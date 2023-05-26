@@ -1,25 +1,40 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router";
+import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";    
 
 function DreamsShow (){
     const[dream, setDream] = useState([]);
-    const dreamID = params.useParams();
+    const { dreamId } = useParams();
     async function getDream(){
         try{
             let singleDream = await fetch(`http://localhost:4000/dreams/${dreamId}`)
             singleDream = await singleDream.json();
-            setDream(singledream);
+            setDream(singleDream);
         } catch(error){
             console.log(error)
         }
     }
+
+    function dreamLoaded(){
+
+        return(
+            <>
+        <h1> Title: {dream.title}</h1>
+        <h1> Meaning: {dream.meaning}</h1>
+        <img src={dream.image} alt="Dream Name" />
+        </>
+        )
+    }
+    useEffect(() =>{
+        getDream()
+    },[]);
+
     return(
- 
-    <>
-    <h1> Dream Show page</h1>
-    </>
+        <>
+        {dream ? dreamLoaded(): <h2> One Moment</h2>}
+        </>
     )
+ 
 }   
 
 export default DreamsShow;
