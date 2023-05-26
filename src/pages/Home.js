@@ -1,5 +1,13 @@
+import { useState, useEffect } from "react";
 
-function Home (){
-    return <h1>My Dream App</h1>
-}
+function Home() {
+    return(
+        
+    <div>
+      
+        <h1> Welcome to Dream Catcher</h1>
+        <p>  Where remembering your dream just got easier</p>
+    </div>
+    )
+};
 export default Home;
