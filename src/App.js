@@ -7,6 +7,7 @@ import DreamsIndex from './pages/DreamsIndex';
 import DreamsShow from './pages/DreamsShow';
 import NightmaresIndex from './pages/NightmaresIndex';
 import NightmaresShow from './pages/NightmaresShow';
+import DreamsEdit from './pages/DreamsEdit';
 
 function App() {
   return (
@@ -19,7 +20,9 @@ function App() {
           <Route path="/dreams" element={<DreamsIndex />} />
           <Route path="/dreams/:dreamId" element={<DreamsShow />} />
           <Route path="/nightmares" element={<NightmaresIndex />} />
-          <Route path="/nightmares/:id" element={<NightmaresShow />} />
+          <Route path="/nightmares/:nightmareId" element={<NightmaresShow />} />
+          <Route path="/dreams/:dreamId/edit" element={<DreamsEdit />} />
+          <Route path="/nightmares/:nightmareId/edit" element={<NightmareEdit />} />
         </Routes>
         </Router>
       <Footer />

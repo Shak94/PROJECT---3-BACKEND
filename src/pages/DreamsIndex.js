@@ -34,7 +34,7 @@ function DreamsIndex() {
                 <h1>Title: {dream.title}</h1>
               </Link>
               <h2>Meaning: {dream.meaning}</h2>
-              <img src={dream.image} alt="Dream Name" />
+              <img src={dream.image} alt="Dream " />
             </div>
           );
         })}

@@ -3,38 +3,38 @@ import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";    
 
 function NightmaresShow (){
-    const[nightmare, setDream] = useState([]);
-    const { dreamId } = useParams();
-    async function getDream(){
+    const[nightmare, setNightmare] = useState([]);
+    const { nightmareId } = useParams();
+    async function getNightmare(){
         try{
-            let singleDream = await fetch(`http://localhost:4000/dreams/${dreamId}`)
-            singleDream = await singleDream.json();
-            setDream(singleDream);
+            let singleNightmare = await fetch(`http://localhost:4000/nightmares/${nightmareId}`)
+            singleNightmare = await singleNightmare.json();
+            setNightmare(singleNightmare);
         } catch(error){
             console.log(error)
         }
     }
 
-    function dreamLoaded(){
+    function nightmareLoaded(){
 
         return(
             <>
-        <h1> Title: {dream.title}</h1>
-        <h1> Meaning: {dream.meaning}</h1>
-        <img src={dream.image} alt="Dream Name" />
+        <h1> Title: {nightmare.title}</h1>
+        <h1> Meaning: {nightmare.meaning}</h1>
+        <img src={nightmare.image} alt="Nightmare Name" />
         </>
         )
     }
     useEffect(() =>{
-        getDream()
+        getNightmare()
     },[]);
 
     return(
         <>
-        {dream ? dreamLoaded(): <h2> One Moment</h2>}
+        {nightmare ? nightmareLoaded(): <h2> One Moment</h2>}
         </>
     )
  
 }   
 
-export default DreamsShow;
+export default NightmaresShow;
