@@ -3,24 +3,24 @@ import { useParams } from "react-router";
 import { useNavigate } from "react-router";
 function NightmaresEdit(){
     const {nightmareId} =useParams();
-    const[dream,setDream] = useState([]);
+    const[nightmare,setNightmare] = useState([]);
     const navigate = useNavigate();
-    async function getDream(){
+    async function getNightmare(){
         try{
-            let singleDream = await fetch (`http://localhost:4000/dreams/${dreamId}`);
-            singleDream = await singleDream.json();
-            setDream(singleDream);
+            let singleNightmare = await fetch (`http://localhost:4000/nightmares/${nigthmareId}`);
+            singleNightmare = await singleNightmare.json();
+            setNightmare(singleNightmare);
 
         } catch (error){
             console.log(error)
         }
     }
     useEffect(() => {
-        getDream();
+        getNightmare();
 
     },[]);
     function handleChange(e){
-        setDream((currentState) =>({
+        setNightmare((currentState) =>({
             ...currentState,
             [e.target.name]: e.target.value
         })
@@ -29,14 +29,14 @@ function NightmaresEdit(){
     async function handleSubmit(e){
         try{
             e.preventDefault();
-            await fetch (`http://localhost:4000/dreams/${dreamId}`, {
+            await fetch (`http://localhost:4000/nightmares/${nightmareId}`, {
                 method:"PUT",
                 headers: {
                     "Content-Type": "application/json"
                 },
-                body: JSON.stringify(dream)
+                body: JSON.stringify(nightmare)
             });
-            return navigate(`http://localhost:4000/dreams/${dreamId}`)
+            return navigate(`http://localhost:4000/nightmares/${nightmareId}`)
             
         } catch(error){
             console.log(error);
@@ -46,11 +46,11 @@ function NightmaresEdit(){
         return(
         
             <>
-            <h1> Change {dream.title}</h1>
+            <h1> Change {nightmare.title}</h1>
             <form onSubmit ={handleSubmit}>
-                Title: <input type ="text" value ={dream.title} name="title" onChange={handleChange}/>
-                Meaning: <input type ="text" value ={dream.meaning} name="meaning" onChange={handleChange}/>
-                Image : <input type ="text" value ={dream.image} name="image" onChange ={handleChange}/>
+                Title: <input type ="text" value ={nightmare.title} name="title" onChange={handleChange}/>
+                Meaning: <input type ="text" value ={nightmare.meaning} name="meaning" onChange={handleChange}/>
+                Image : <input type ="text" value ={nightmare.image} name="image" onChange ={handleChange}/>
                 <button> Click Here to Finalize Change</button>
             </form>
             </>
@@ -59,8 +59,8 @@ function NightmaresEdit(){
 
     return(
         <>
-        {dream ? loaded(): <h1> One Moment ...</h1>}
+        {nightmare ? loaded(): <h1> One Moment ...</h1>}
         </>
     )
 }
-export default DreamsEdit;
+export default NightmaresEdit;
