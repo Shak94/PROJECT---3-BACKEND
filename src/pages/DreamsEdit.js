@@ -3,7 +3,7 @@ import { useParams } from "react-router";
 import { useNavigate } from "react-router";
 function DreamsEdit(){
     const {dreamId} =useParams();
-    const[dream,setDream] = useState([]);
+    const [dream, setDream] = useState(null);
     const navigate = useNavigate();
     async function getDream(){
         try{

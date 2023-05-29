@@ -1,4 +1,5 @@
 import './App.css';
+import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -8,6 +9,9 @@ import DreamsShow from './pages/DreamsShow';
 import NightmaresIndex from './pages/NightmaresIndex';
 import NightmaresShow from './pages/NightmaresShow';
 import DreamsEdit from './pages/DreamsEdit';
+import NightmaresEdit from './pages/NightmaresEdit';
+import DreamsDelete from './pages/DreamsDelete';
+import NightmaresDelete from './pages/NightmaresDelete';
 
 function App() {
   return (
@@ -22,7 +26,10 @@ function App() {
           <Route path="/nightmares" element={<NightmaresIndex />} />
           <Route path="/nightmares/:nightmareId" element={<NightmaresShow />} />
           <Route path="/dreams/:dreamId/edit" element={<DreamsEdit />} />
-          <Route path="/nightmares/:nightmareId/edit" element={<NightmareEdit />} />
+          <Route path="/nightmares/:nightmareId/edit" element={<NightmaresEdit />} />
+          <Route path ="/dreams/:dreamdId/delete"   element ={<DreamsDelete/>} />
+          <Route path ="nightmares/:nightmareId/delete" element ={<NightmaresDelete/>}/>
+
         </Routes>
         </Router>
       <Footer />
