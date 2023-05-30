@@ -32,7 +32,7 @@ function NightmaresIndex() {
           return (
             <div className="nightmare-item" key={idx}>
               <Link to={`/nightmares/${nightmare._id}`}>
-                <h1 className="nightmare-title ">Title: {nightmare.title}</h1>
+                <h1 className="nightmare-title "> {nightmare.title}</h1>
               </Link>
               <p className="nightmare-meaning">Meaning: {nightmare.meaning}</p>
               <img src={nightmare.image} alt="Nightmare Name" className="nightmare-image" />

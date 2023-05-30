@@ -12,6 +12,7 @@ import DreamsEdit from './pages/DreamsEdit';
 import NightmaresEdit from './pages/NightmaresEdit';
 import DreamsDelete from './pages/DreamsDelete';
 import NightmaresDelete from './pages/NightmaresDelete';
+import DreamsForm from './pages/DreamsForm';
 
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
           <Route path="/nightmares/:nightmareId/edit" element={<NightmaresEdit />} />
           <Route path="/dreams/:dreamId/delete" element={<DreamsDelete />} />
           <Route path="/nightmares/:nightmareId/delete" element={<NightmaresDelete />} />
+          <Route path="/dreamsform" element={<DreamsForm />} />
         </Routes>
         <Footer />
       </Router>

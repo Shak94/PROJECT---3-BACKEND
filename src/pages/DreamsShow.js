@@ -19,7 +19,7 @@ function DreamsShow (){
 
         return(
             <>
-        <h1> Title: {dream.title}</h1>
+        <h1> Title {dream.title}</h1>
         <h1> Meaning: {dream.meaning}</h1>
         <img src={dream.image} alt="Dream Name" />
         <Link to={`/dreams/${dreamId}/edit`}>\

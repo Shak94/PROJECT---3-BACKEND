@@ -15,7 +15,7 @@ function NightmaresDelete(){
             "Conetent-Type": "application/json"
           }
       } ,
-      useNavigate("/nightmares");
+      useNavigate("/Nightmares");
     
         } catch (error){
             console.log(error);
