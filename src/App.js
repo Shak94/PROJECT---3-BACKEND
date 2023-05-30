@@ -13,12 +13,12 @@ import NightmaresEdit from './pages/NightmaresEdit';
 import DreamsDelete from './pages/DreamsDelete';
 import NightmaresDelete from './pages/NightmaresDelete';
 
+
 function App() {
   return (
     <div className="DreamApp"> 
-        <Router>
-       <Header/> 
-
+      <Router>
+        <Header />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/dreams" element={<DreamsIndex />} />
@@ -27,12 +27,11 @@ function App() {
           <Route path="/nightmares/:nightmareId" element={<NightmaresShow />} />
           <Route path="/dreams/:dreamId/edit" element={<DreamsEdit />} />
           <Route path="/nightmares/:nightmareId/edit" element={<NightmaresEdit />} />
-          <Route path ="/dreams/:dreamdId/delete"   element ={<DreamsDelete/>} />
-          <Route path ="nightmares/:nightmareId/delete" element ={<NightmaresDelete/>}/>
-
+          <Route path="/dreams/:dreamId/delete" element={<DreamsDelete />} />
+          <Route path="/nightmares/:nightmareId/delete" element={<NightmaresDelete />} />
         </Routes>
-        </Router>
-      <Footer />
+        <Footer />
+      </Router>
     </div>
   );
 }

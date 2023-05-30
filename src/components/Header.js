@@ -1,12 +1,13 @@
 import {Link} from 'react-router-dom'
 function Header(){
     return(
-        <div className= "navbar">
-
-        <nav>
-       <Link to = '/'>Home</Link>   
-       <Link to ='/dreams'>Dreams</Link>    
-       <Link to ='/nightmares'>Nightmares</Link>
+        <div className= "nav">
+  <nav className="navbar navbar-expand-lg bg-body-tertiary">
+  <div className="container-fluid">
+  <Link className="nav-link" to = '/'>Home</Link>   
+  <Link className="nav-link" to ='/dreams'>Dreams</Link>    
+  <Link className="nav-link" to ='/nightmares'>Nightmares</Link>
+       </div>
         </nav>
         </div>
     )

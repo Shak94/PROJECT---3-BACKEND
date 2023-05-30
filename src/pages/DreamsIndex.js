@@ -27,17 +27,19 @@ function DreamsIndex() {
   function loader(arr) {
     return (
       <>
+          <div className="dreambody">
         {arr.map((dream, idx) => {
           return (
-            <div key={idx}>
+            <div className="dream-item" key={idx}>
               <Link to={`/dreams/${dream._id}`}>
-                <h1>Title: {dream.title}</h1>
+                <h1 className="dream-title"> Title: {dream.title}</h1>
               </Link>
-              <h2>Meaning: {dream.meaning}</h2>
-              <img src={dream.image} alt="Dream " />
+              <p className="dream-meaning" >Meaning: {dream.meaning}</p>
+              <img src={dream.image} alt="Dream " className="dream-image"/>
             </div>
           );
         })}
+        </div>
       </>
     );
   }
@@ -67,7 +69,8 @@ function DreamsIndex() {
 
   return (
     <>
-      <h1>My dream index</h1>
+
+    
       <form onSubmit={handleSubmit}>
         <div>
           <label>Title:</label>

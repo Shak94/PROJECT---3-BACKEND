@@ -1,9 +1,103 @@
-.navBar {
+@import '~bootstrap/dist/css/bootstrap.css';
+
+.nav{
+  background-image: url('./images/randy-tarampi-U2eUlPEKIgU-unsplash.jpg');
+  margin-right: 5px;
+  text-align: center;
   display: flex;
   justify-content: space-around;
-  background-color: yellow;
-  color: white;
-  text-decoration: none;
-  height: 10vh;
-  font-size: 2.5em;
+  width: 100%;
+
+  position: relative;
+}
+
+
+.home{
+  background-image: url('./images/laura-vinck-Hyu76loQLdk-unsplash.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+.dreambody {
+  background-image: url('./images/pat-whelen-p177Ew94aHY-unsplash.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; 
+  max-width: 100%; 
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+
+.dream-item {
+  background-color: #f5f5f5;
+  padding: 20px;
+  border-radius: 5px;
+  flex: 0 0 calc(33.33% - 20px);
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.dream-title {
+  font-weight: bold;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.dream-meaning {
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.dream-image {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+body {
+  margin: 0; /* Remove default body margin */
+}
+
+.nightmarebody {
+  background-image: url('./images/pat-whelen-p177Ew94aHY-unsplash.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; 
+  max-width: 100%; 
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.nightmare-item {
+  background-color: #f5f5f5;
+  padding: 20px;
+  border-radius: 5px;
+  flex: 0 0 calc(33.33% - 20px);
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.nightmare-title {
+  font-weight: bold;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.nightmare-meaning {
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.nightmare-image {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
 }
