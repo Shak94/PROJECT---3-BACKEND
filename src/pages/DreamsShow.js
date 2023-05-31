@@ -5,7 +5,8 @@ import { Link } from "react-router-dom";
 function DreamsShow (){
     const[dream, setDream] = useState([]);
     const { dreamId } = useParams();
-    async function getDream(){
+    useEffect(() =>{
+    const getDream = async () => {
         try{
             let singleDream = await fetch(`http://localhost:4000/dreams/${dreamId}`)
             singleDream = await singleDream.json();
@@ -14,6 +15,9 @@ function DreamsShow (){
             console.log(error)
         }
     }
+    getDream();
+    },[dreamId]);
+
 
     function dreamLoaded(){
 
@@ -32,9 +36,6 @@ function DreamsShow (){
         </>
         )
     }
-    useEffect(() =>{
-        getDream()
-    },[]);
 
     return(
         <>
