@@ -26,10 +26,10 @@ function DreamsShow (){
         <h1> Title {dream.title}</h1>
         <h1> Meaning: {dream.meaning}</h1>
         <img src={dream.image} alt="Dream Name" />
-        <Link to={`/dreams/${dreamId}/edit`}>\
+        <Link to={`/dreams/${dreamId}/edit`}>
         <button> EDIT </button>
         </Link>
-        <Link to={`/dreams/${dreamId}/delete`}>\
+        <Link to={`/dreams/${dreamId}/delete`}>
         <button> DELETE </button>
         </Link>
 
