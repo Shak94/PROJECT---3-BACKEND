@@ -1,15 +1,14 @@
-
-function Footer(){
-    return(
+function Footer() {
+    return (
         <>
-        <div className='Footer'>
+            <div className='Footer'>
 
-   <h3> Terms And Conditions</h3>
-   <br></br>
-   <h3>   Contact us</h3>
-   <br></br>
-        </div>
-      
+                <h3> Terms And Conditions</h3>
+                <br></br>
+                <h3>   Contact us</h3>
+                <br></br>
+            </div>
+
         </>
     )
 };

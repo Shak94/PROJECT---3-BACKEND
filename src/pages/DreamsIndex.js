@@ -22,20 +22,20 @@ function DreamsIndex() {
   function loader(arr) {
     return (
       <>
-          <div className="dreambody">
-        {arr.map((dream, idx) => {
-          return (
-            <div className="dream-item" key={idx}>
-            <Link to={'/dreams/dreamform'}>
-            </Link>
-              <Link to={`/dreams/${dream._id}`}>
-                <h1 className="dream-title">  {dream.title}</h1>
-              </Link>
-              <p className="dream-meaning" >Meaning: {dream.meaning}</p>
-              <img src={dream.image} alt="Dream " className="dream-image"/>
-            </div>
-          );
-        })}
+        <div className="dreambody">
+          {arr.map((dream, idx) => {
+            return (
+              <div className="dream-item" key={idx}>
+                <Link to={'/dreams/dreamform'}>
+                </Link>
+                <Link to={`/dreams/${dream._id}`}>
+                  <h1 className="dream-title">  {dream.title}</h1>
+                </Link>
+                <p className="dream-meaning" >Meaning: {dream.meaning}</p>
+                <img src={dream.image} alt="Dream " className="dream-image" />
+              </div>
+            );
+          })}
         </div>
       </>
     );
@@ -47,10 +47,10 @@ function DreamsIndex() {
   return (
     <>
 
-    
-     <button>
-      <Link to ="/dreamsform">ADD DREAM</Link>
-     </button>
+
+      <button>
+        <Link to="/dreamsform">ADD DREAM</Link>
+      </button>
       {dreams.length ? loader(dreams) : <h3>One Moment</h3>}
     </>
   );

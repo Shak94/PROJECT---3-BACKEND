@@ -17,6 +17,9 @@ body{
   text-align: center;
 border-bottom: 0;
 background-color: lightskyblue;
+position:relatice;
+bottom: -60px;;
+width: 100%;
 }
 
 
@@ -102,4 +105,11 @@ background-color: lightskyblue;
   width: 100%;
   height: auto;
   border-radius: 5px;
+}
+.dreams-form{
+  background-image: url('./images/frankie-k-QHBEEOpjCDQ-unsplash.jpg');
+}
+
+.nightmare-form{
+  background-image:  url('./images/shot-by-cerqueira-0o_GEzyargo-unsplash.jpg');
 }

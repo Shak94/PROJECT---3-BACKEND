@@ -23,18 +23,18 @@ function NightmaresIndex() {
   function loader(arr) {
     return (
       <>
-          <div className="nightmarebody">
-        {arr.map((nightmare, idx) => {
-          return (
-            <div className="nightmare-item" key={idx}>
-              <Link to={`/nightmares/${nightmare._id}`}>
-                <h1 className="nightmare-title "> {nightmare.title}</h1>
-              </Link>
-              <p className="nightmare-meaning">Meaning: {nightmare.meaning}</p>
-              <img src={nightmare.image} alt="Nightmare Name" className="nightmare-image" />
+        <div className="nightmarebody">
+          {arr.map((nightmare, idx) => {
+            return (
+              <div className="nightmare-item" key={idx}>
+                <Link to={`/nightmares/${nightmare._id}`}>
+                  <h1 className="nightmare-title "> {nightmare.title}</h1>
+                </Link>
+                <p className="nightmare-meaning">Meaning: {nightmare.meaning}</p>
+                <img src={nightmare.image} alt="Nightmare Name" className="nightmare-image" />
               </div>
-          );
-        })}
+            );
+          })}
         </div>
       </>
     );
@@ -42,17 +42,17 @@ function NightmaresIndex() {
   return (
     <>
 
-    
-     <button>
-      <Link to ="/nightmaresform">ADD Nightmare</Link>
-     </button>
-     {nightmares.length ? loader(nightmares) : <h3>One Moment</h3>}
-    
+
+      <button>
+        <Link to="/nightmaresform">ADD Nightmare</Link>
+      </button>
+      {nightmares.length ? loader(nightmares) : <h3>One Moment</h3>}
+
     </>
   );
 }
- 
-    
+
+
 
 
 export default NightmaresIndex;

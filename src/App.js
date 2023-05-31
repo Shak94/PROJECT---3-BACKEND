@@ -1,3 +1,4 @@
+//IMPORTS//
 import './App.css';
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
@@ -15,10 +16,10 @@ import NightmaresDelete from './pages/NightmaresDelete';
 import DreamsForm from './pages/DreamsForm';
 import NightmaresForm from './pages/NightmaresForm';
 
-
+//FUNCTION APP WITH ROUTES//
 function App() {
   return (
-    <div className="DreamApp"> 
+    <div className="DreamApp">
       <Router>
         <Header />
         <Routes>
@@ -32,7 +33,7 @@ function App() {
           <Route path="/dreams/:dreamId/delete" element={<DreamsDelete />} />
           <Route path="/nightmares/:nightmareId/delete" element={<NightmaresDelete />} />
           <Route path="/dreamsform" element={<DreamsForm />} />
-           <Route path ="/nightmaresform" element ={<NightmaresForm/>}/>
+          <Route path="/nightmaresform" element={<NightmaresForm />} />
         </Routes>
         <Footer />
       </Router>

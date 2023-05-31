@@ -1,13 +1,13 @@
 
-import { useState} from "react";
+import { useState } from "react";
 
-function NightmaresForm(){
+function NightmaresForm() {
 
-    const [nightmaresForm, setNightmaresForm] = useState({
-        title: "",
-        meaning: "",
-        image: "",
-      });
+  const [nightmaresForm, setNightmaresForm] = useState({
+    title: "",
+    meaning: "",
+    image: "",
+  });
   function handleChange(e) {
     console.log(e.target);
     setNightmaresForm((previousFormState) => ({
@@ -33,8 +33,8 @@ function NightmaresForm(){
 
   return (
     <>
-  
-      
+
+
       <form className="nightmare-form" onSubmit={handleSubmit}>
         <div>
           <label>Title:</label>
