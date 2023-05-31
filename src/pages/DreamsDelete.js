@@ -1,19 +1,24 @@
 import { useParams } from "react-router";
 import { Link } from "react-router-dom";
-import { useNavigate } from "react-router";
+import { useNavigate } from "react-router-dom";
+
 
 function DreamsDelete(){
-    const{dreamId} = useParams();
+    const {dreamId} = useParams();
+    const navigate = useNavigate();
 
-    async function deletedDream() {
+    async function deleteDream() {
         try {
-          await fetch(`http://localhost:4000/dreams/${dreamId}`, {
+          const deletedDream = await fetch(`http://localhost:4000/dreams/${dreamId}`, {
             method: "DELETE",
             headers: {
               "Content-Type": "application/json",
             },
           });
-          navigate("/dreams");
+          console.log(deletedDream)
+          if(deletedDream){
+            return navigate('/dreams')
+          }
         } catch (error) {
           console.log(error);
         }
@@ -21,7 +26,7 @@ function DreamsDelete(){
     return (
         <>
           <h3>Delete this dream</h3>
-          <button onClick={deletedDream}> 🗑️ </button>
+          <button onClick={deleteDream}> 🗑️ </button>
           <Link to={`/dreams/${dreamId}`}>Cancel</Link>
         </>
       );

@@ -1,25 +1,22 @@
 @import '~bootstrap/dist/css/bootstrap.css';
-
+body{
+  font-family: cursive;
+}
 .nav{
-  /* background-image: url('./images/randy-tarampi-U2eUlPEKIgU-unsplash.jpg');
+  /* background-image: url('./images/anton-repponen-3MNzGlQM7qs-unsplash.jpg'); */
   margin-right: 5px;
   text-align: center;
   display: flex;
   justify-content: space-around;
-  width: 100%; */
-
+  display: block;
   position: relative;
-}
-.navbar-bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url('./images/randy-tarampi-U2eUlPEKIgU-unsplash.jpg');
-  background-size: cover;
-  background-position: center;
+  background-color: lightskyblue;
 
+}
+.Footer{
+  text-align: center;
+border-bottom: 0;
+background-color: lightskyblue;
 }
 
 
@@ -42,16 +39,6 @@
   box-sizing: border-box;
 }
 
-
-.dream-item {
-  background-color: #f5f5f5;
-  padding: 20px;
-  border-radius: 5px;
-  flex: 0 0 calc(33.33% - 20px);
-  margin-bottom: 20px;
-  text-align: center;
-}
-
 .dream-title {
   font-weight: bold;
   font-size: 24px;
@@ -69,9 +56,13 @@
   height: auto;
   border-radius: 5px;
 }
-
-body {
-  margin: 0; /* Remove default body margin */
+.dream-item {
+  background-color: #f5f5f5;
+  padding: 20px;
+  border-radius: 5px;
+  flex: 0 0 calc(40.33% - 10px);
+  margin-bottom: 20px;
+  text-align: center;
 }
 
 .nightmarebody {
@@ -89,8 +80,8 @@ body {
 .nightmare-item {
   background-color: #f5f5f5;
   padding: 20px;
+  flex: 0 0 calc(40.33% - 10px);
   border-radius: 5px;
-  flex: 0 0 calc(33.33% - 20px);
   margin-bottom: 20px;
   text-align: center;
 }

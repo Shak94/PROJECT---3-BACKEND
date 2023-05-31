@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { useState,useEffect } from "react";
+import { useState } from "react";
 
 function DreamsForm(){
 
@@ -35,7 +35,7 @@ function DreamsForm(){
         <>
     
         
-          <form onSubmit={handleSubmit}>
+          <form className="dreams-form" onSubmit={handleSubmit}>
             <div>
               <label>Title:</label>
               <input

@@ -5,20 +5,19 @@ function DreamsEdit(){
     const {dreamId} =useParams();
     const [dream, setDream] = useState(null);
     const navigate = useNavigate();
-    async function getDream(){
-        try{
-            let singleDream = await fetch (`http://localhost:4000/dreams/${dreamId}`);
-            singleDream = await singleDream.json();
-            setDream(singleDream);
-
-        } catch (error){
-            console.log(error)
-        }
-    }
     useEffect(() => {
+        const getDream = async () => {
+            try{
+                let singleDream = await fetch (`http://localhost:4000/dreams/${dreamId}`);
+                singleDream = await singleDream.json();
+                setDream(singleDream);
+    
+            } catch (error){
+                console.log(error)
+            }
+        }
         getDream();
-
-    },[]);
+    },[dreamId]);
     function handleChange(e){
         setDream((currentState) =>({
             ...currentState,
@@ -29,14 +28,16 @@ function DreamsEdit(){
     async function handleSubmit(e){
         try{
             e.preventDefault();
-            await fetch (`http://localhost:4000/dreams/${dreamId}`, {
+            const updatedDream = await fetch (`http://localhost:4000/dreams/${dreamId}`, {
                 method:"PUT",
                 headers: {
                     "Content-Type": "application/json"
                 },
                 body: JSON.stringify(dream)
             });
-            return navigate(`http://localhost:4000/dreams/${dreamId}`)
+            if (updatedDream){
+                return navigate(`/dreams/${dreamId}`)
+            }
             
         } catch(error){
             console.log(error);

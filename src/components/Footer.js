@@ -2,7 +2,13 @@ import {Link} from 'react-router-dom'
 function Footer(){
     return(
         <>
-        <h1> This is my Footer</h1>
+        <div className='Footer'>
+
+   <h3> Terms And Conditions</h3>
+   <br></br>
+   <h3>   Contact us</h3>
+   <br></br>
+        </div>
       
         </>
     )

@@ -4,11 +4,6 @@ import { useState, useEffect } from "react";
 function DreamsIndex() {
   const [dreams, setDreams] = useState([]);
 
-  const [dreamsForm, setDreamsForm] = useState({
-    title: "",
-    meaning: "",
-    image: "",
-  });
 
   async function getDreams() {
     try {

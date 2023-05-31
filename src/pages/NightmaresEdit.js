@@ -3,22 +3,22 @@ import { useParams } from "react-router";
 import { useNavigate } from "react-router";
 function NightmaresEdit(){
     const {nightmareId} =useParams();
-    const[nightmare,setNightmare] = useState([]);
+    const[nightmare,setNightmare] = useState(null);
     const navigate = useNavigate();
-    async function getNightmare(){
-        try{
-            let singleNightmare = await fetch (`http://localhost:4000/nightmares/${nigthmareId}`);
-            singleNightmare = await singleNightmare.json();
-            setNightmare(singleNightmare);
-
-        } catch (error){
-            console.log(error)
+     useEffect(() => {
+        const getNightmare = async () => {
+            try{
+                let singleNightmare = await fetch (`http://localhost:4000/nightmares/${nightmareId}`);
+                singleNightmare = await singleNightmare.json();
+                setNightmare(singleNightmare);
+    
+            } catch (error){
+                console.log(error)
+            }
         }
-    }
-    useEffect(() => {
         getNightmare();
-
-    },[]);
+    },[nightmareId]);
+    
     function handleChange(e){
         setNightmare((currentState) =>({
             ...currentState,
@@ -36,7 +36,7 @@ function NightmaresEdit(){
                 },
                 body: JSON.stringify(nightmare)
             });
-            return navigate(`http://localhost:4000/nightmares/${nightmareId}`)
+            return navigate(`/nightmares/${nightmareId}`)
             
         } catch(error){
             console.log(error);
@@ -44,7 +44,7 @@ function NightmaresEdit(){
     }
     function loaded(){
         return(
-        
+            
             <>
             <h1> Change {nightmare.title}</h1>
             <form onSubmit ={handleSubmit}>
@@ -56,11 +56,12 @@ function NightmaresEdit(){
             </>
         )
     }
-
+    
     return(
         <>
         {nightmare ? loaded(): <h1> One Moment ...</h1>}
         </>
     )
 }
+
 export default NightmaresEdit;
