@@ -17,7 +17,7 @@ body{
   text-align: center;
 border-bottom: 0;
 background-color: lightskyblue;
-position:relatice;
+position:relative;
 bottom: -60px;;
 width: 100%;
 }
@@ -55,15 +55,16 @@ width: 100%;
 }
 
 .dream-image {
-  width: 100%;
-  height: auto;
+  width: 50%;
+  height: 50%;
   border-radius: 5px;
+  margin-bottom: 45%;
 }
 .dream-item {
-  background-color: #f5f5f5;
+
   padding: 20px;
-  border-radius: 5px;
   flex: 0 0 calc(40.33% - 10px);
+  border-radius: 5px;
   margin-bottom: 20px;
   text-align: center;
 }
@@ -81,7 +82,7 @@ width: 100%;
 }
 
 .nightmare-item {
-  background-color: #f5f5f5;
+  
   padding: 20px;
   flex: 0 0 calc(40.33% - 10px);
   border-radius: 5px;
@@ -97,14 +98,24 @@ width: 100%;
 
 .nightmare-meaning {
   font-weight: bold;
+  color: black;
   font-size: 18px;
   margin-bottom: 10px;
 }
 
 .nightmare-image {
-  width: 100%;
-  height: auto;
+  width: 50%;
+  height: 50%;
   border-radius: 5px;
+  margin-bottom: 45%;
+}
+.dream-show{
+  background-image: url('./images/anton-repponen-3MNzGlQM7qs-unsplash.jpg');
+  background-size: cover;
+}
+.nightmare-show{
+  background-image: url('./images/stefano-pollio-ZC0EbdLC8G0-unsplash.jpg');
+  background-size: cover;
 }
 .dreams-form{
   background-image: url('./images/frankie-k-QHBEEOpjCDQ-unsplash.jpg');

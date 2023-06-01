@@ -23,7 +23,8 @@ function DreamsShow() {
 
         return (
             <>
-                <h1> Title {dream.title}</h1>
+            <div className="dream-show">
+            <h1> Title {dream.title}</h1>
                 <h1> Meaning: {dream.meaning}</h1>
                 <img src={dream.image} alt="Dream Name" />
                 <Link to={`/dreams/${dreamId}/edit`}>
@@ -32,7 +33,7 @@ function DreamsShow() {
                 <Link to={`/dreams/${dreamId}/delete`}>
                     <button> DELETE </button>
                 </Link>
-
+            </div>
             </>
         )
     }

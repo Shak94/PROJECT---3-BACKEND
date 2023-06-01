@@ -19,6 +19,7 @@ function NightmaresShow() {
 
         return (
             <>
+            <div className="nightmare-show">
                 <h1> Title: {nightmare.title}</h1>
                 <h1> Meaning: {nightmare.meaning}</h1>
                 <img src={nightmare.image} alt="Nightmare Name" />
@@ -28,6 +29,7 @@ function NightmaresShow() {
                 <Link to={`/nightmares/${nightmareId}/delete`}>\
                     <button> DELETE </button>
                 </Link>
+                </div>
             </>
         )
     }

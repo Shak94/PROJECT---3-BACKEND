@@ -27,7 +27,7 @@ function DreamsDelete() {
     <>
       <h3>Delete this dream</h3>
       <button onClick={deleteDream}> 🗑️ </button>
-      <Link to={`/dreams/${dreamId}`}>Cancel</Link>
+      <Link to={`/dreams/${dreamId}`}>❌</Link>
     </>
   );
 }
